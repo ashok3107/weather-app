@@ -9,8 +9,12 @@ const LocationList = () => {
   const loader = useAppSelector(state => state.app.loader);
   return (
     <div className={styles.locationList}>
-      {loader && <FullPageLoader />}
-      {weatherReport.map((weatherItem: LocationItemType) => <LocationListItem key={weatherItem.id} {...weatherItem} />)}
+      {loader ? <FullPageLoader /> : (
+        weatherReport.length ? weatherReport.map((weatherItem: LocationItemType) => <LocationListItem key={weatherItem.id} {...weatherItem} />) : (
+          <span>No cities selected. Please choose cities from "Select Cities" button in the header.</span>
+        )
+      )}
+      
     </div>
   )
 };

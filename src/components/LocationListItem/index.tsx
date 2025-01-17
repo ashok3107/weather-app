@@ -43,8 +43,6 @@ const LocationListItem = (props: LocationItemType) => {
         <div className={styles.infoCards}>
           <InfoCard title='Feels Like' value={feelsLikeTemp} unit={<><sup>o</sup>F</>} icon="tempIcon" />
           <InfoCard title='Wind' value={windSpeed} unit="m/s" icon="windIcon" />
-          {/* <InfoCard title='Humidity' value={humidity} unit="%" icon="humidityIcon" />
-          <InfoCard title='Pressure' value={pressure} unit=" hPa" icon="pressureIcon" /> */}
           <InfoCard title='Temp Min.' value={tempMin} unit={<><sup>o</sup>F</>} icon="minTempIcon" />
           <InfoCard title='Temp Max.' value={tempMax} unit={<><sup>o</sup>F</>} icon="maxTempIcon" />
           <InfoCard title='Sunrise' value={getFormattedTimeFromEpoch(sunrise, timezone)} unit="" icon="sunriseIcon" />
