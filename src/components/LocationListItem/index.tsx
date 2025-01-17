@@ -1,5 +1,4 @@
 import { getFormattedTimeFromEpoch, getWeatherIcon } from '../../helpers/App.helper';
-import IconMap from '../../helpers/IconMap';
 import InfoCard from '../InfoCard';
 import styles from './LocationListItem.module.scss';
 
@@ -25,8 +24,8 @@ export type LocationItemType = {
 
 const LocationListItem = (props: LocationItemType) => {
   const {
-    name, temp, tempMin, tempMax, feelsLikeTemp, humidity, pressure, windSpeed, country,
-    sunrise, sunset, icon, lon, lat, description, timezone,
+    name, temp, tempMin, tempMax, feelsLikeTemp, windSpeed, country,
+    sunrise, sunset, icon, description, timezone,
   } = props;
   return (
     <div className={styles.listItemContainer}>
