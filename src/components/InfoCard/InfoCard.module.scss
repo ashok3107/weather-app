@@ -1,0 +1,22 @@
+.infoCard {
+  width: calc(50% - 20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px dotted;
+  border-radius: 8px;
+  padding: 5px 5px 10px 15px;
+  box-sizing: border-box;
+  .valueContainer {
+    span + span {
+      margin-left: 2px;
+    }
+  }
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  h4 {
+    margin: 0;
+  }
+}

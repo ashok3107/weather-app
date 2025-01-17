@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react'
 import './App.css'
+import Header from './components/Header'
+import LocationList from './components/LocationList'
 
 function App() {
-  useEffect(() => {
-    // fetch Current Location
-
-  }, []);
   return (
     <>
-    
+      <Header />
+      <div className="appBody">
+        <h2>Selected Cities</h2>
+        <LocationList />
+      </div>
     </>
   )
 }
