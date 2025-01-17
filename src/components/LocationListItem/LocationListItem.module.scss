@@ -53,5 +53,8 @@
 @media (max-width: 960px) {
   .listItemContainer {
     width: 100%;
+    &:hover {
+      backdrop-filter: unset;
+    }
   }
 }
