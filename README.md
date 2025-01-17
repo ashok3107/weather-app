@@ -1,6 +1,6 @@
 Weather App
 
-A simple Weather Application that displays you current location's weather info and an option to Select other cities from the list and remembers the selection by storing it in LocalStorage.
+A simple Weather Application that displays your current location's weather info (based on your permission) and an option to Select other cities from the list and remembers the selection by storing it in LocalStorage.
 
 Tech Stack: React, Redux, TypeScript, Vite
 
