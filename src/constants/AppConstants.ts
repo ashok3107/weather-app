@@ -24,3 +24,7 @@ export const AVAILABLE_CITIES = [
     "name": "Chennai, IN",
   },
 ];
+
+export const CURR_LOCATION = {
+  lat: 0, lon: 0,
+};

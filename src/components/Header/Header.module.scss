@@ -3,6 +3,7 @@
   top: 0;
   background: linear-gradient(90deg, rgba(149, 137, 0, 1) 0%, rgba(249, 255, 0, 1) 35%, rgba(231, 232, 131, 1) 100%);
   border-bottom: 1px solid white;
+  z-index: 1;
   .header{
     display: flex;
     align-items: center;

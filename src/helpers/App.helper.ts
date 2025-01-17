@@ -1,4 +1,5 @@
 import { LocationItemType } from "../components/LocationListItem";
+import { CURR_LOCATION } from "../constants/AppConstants";
 
 export const getFormattedWeatherDetails = (weatherData: any) : LocationItemType => {
   const {
@@ -41,3 +42,5 @@ export const getFormattedTimeFromEpoch = (epoch: number, timezone: number = 0): 
   const minutes = date.getUTCMinutes();
   return `${hours > 12 ? hours - 12 : hours}:${minutes < 10 ? `0${minutes}` : minutes} ${hours < 12 ? 'AM': 'PM'}`;
 }
+
+export const isSameLocation = (lat: number, lon: number) => lat.toString() === CURR_LOCATION.lat.toFixed(4) && lon.toString() === CURR_LOCATION.lon.toFixed(4);

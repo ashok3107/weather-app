@@ -6,6 +6,7 @@ import ACTION_TYPES from "./App.actionTypes";
 import StorageUtility, { StorageKeys } from "./helpers/LocalStorage";
 import { getFormattedWeatherDetails } from "./helpers/App.helper";
 import { LocationItemType } from "./components/LocationListItem";
+import { CURR_LOCATION } from "./constants/AppConstants";
 
 type AppAction = ThunkAction<void, RootState, unknown, AnyAction>;
 
@@ -21,6 +22,7 @@ export const getAllWeatherData = (): AppAction => (dispatch, getState) => {
     const selectedCities = [...(getState().app.selectedLocations || [])];
     if (position) {
       const { latitude, longitude } = position.coords;
+      CURR_LOCATION.lat = latitude; CURR_LOCATION.lon = longitude;
       promises.push(getWeatherDataByLocation(latitude, longitude));
     }
     selectedCities.forEach(city => promises.push(getWeatherDataByCityId(city)));

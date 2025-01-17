@@ -20,6 +20,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 10px 0;
+      .myLoc{
+        font-size: 16px;
+        color: #575757;
+        margin-top: 5px;
+      }
     }
     img {
       width: 100px;
@@ -55,6 +61,7 @@
     width: 100%;
     &:hover {
       backdrop-filter: unset;
+      background: transparent;
     }
   }
 }

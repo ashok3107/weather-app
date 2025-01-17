@@ -1,4 +1,4 @@
-import { getFormattedTimeFromEpoch, getWeatherIcon } from '../../helpers/App.helper';
+import { getFormattedTimeFromEpoch, getWeatherIcon, isSameLocation } from '../../helpers/App.helper';
 import InfoCard from '../InfoCard';
 import styles from './LocationListItem.module.scss';
 
@@ -25,7 +25,7 @@ export type LocationItemType = {
 const LocationListItem = (props: LocationItemType) => {
   const {
     name, temp, tempMin, tempMax, feelsLikeTemp, windSpeed, country,
-    sunrise, sunset, icon, description, timezone,
+    sunrise, sunset, icon, description, timezone, lat, lon,
   } = props;
   return (
     <div className={styles.listItemContainer}>
@@ -36,6 +36,7 @@ const LocationListItem = (props: LocationItemType) => {
         <h4>
           <div>{name}</div>
           <span>{country}</span>
+          {isSameLocation(lat, lon) && <span className={styles.myLoc}>My Location</span>}
         </h4>
       </div>
       <div className={styles.verticalLine}></div>
